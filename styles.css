@@ -1,80 +1,76 @@
 /* General Styles */
 body {
-    font-family: 'Roboto', Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
+    font-family: 'Roboto', Arial, sans-serif; /* Use Roboto font with fallbacks */
+    line-height: 1.6; /* Improve readability */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
     color: #d3d3d3; /* Light grey text for readability on dark background */
     background-color: #1a1a1a; /* Dark grey background */
 }
 
 header#hero {
-    text-align: center;
-    padding: 30px 20px;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('DEEP.png') center/cover;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    text-align: center; /* Center-align text */
+    padding: 30px 20px; /* Add padding around the header */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('DEEP.png') center/cover; /* Add a semi-transparent gradient over the background image */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Add a subtle shadow for depth */
     min-height: 250px; /* Ensure the image is visible */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center items vertically */
 }
 header#hero h1, header#hero p {
-    opacity: 0;
-    animation: fadeIn 1.0s ease-in forwards;
+    opacity: 0; /* Initially hide text */
+    animation: fadeIn 1.0s ease-in forwards; /* Fade in text */
 }
 @keyframes fadeIn {
-    to { opacity: 1; }
+    to { opacity: 1; } /* Final state of the animation */
 }
 header#hero h1 {
-    font-size: 3em;  /*Slightly larger than 2.5em */
-    font-weight: 700;
+    font-size: 3em; /* Slightly larger than 2.5em for emphasis */
+    font-weight: 700; /* Bold text */
 } 
 section {
-    opacity: 0;
-    animation: fadeIn 1.25s ease-in forwards;
-}
-
-@keyframes fadeIn {
-    to { opacity: 1; }
+    opacity: 0; /* Initially hide sections */
+    animation: fadeIn 1.25s ease-in forwards; /* Fade in sections */
 }
 
 /* Header Styles */
 header {
-    text-align: center;
-    padding: 30px 20px;
+    text-align: center; /* Center-align text */
+    padding: 30px 20px; /* Add padding around the header */
     background: linear-gradient(to bottom, #2a2a2a, #1a1a1a); /* Dark gradient for depth */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Darker shadow for dark mode */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Add a subtle shadow for depth */
 }
 
 header h1 {
-    font-size: 2.5em;
-    margin: 0;
-    color: #fff; /* White for the name to stand out */
+    font-size: 2.5em; /* Large font size for the main heading */
+    margin: 0; /* Remove default margin */
+    color: #fff; /* White text for contrast */
 }
 
 header p {
-    font-size: 1.2em;
-    color: #ebe9e9; /* Lighter grey for the tagline */
-    margin: 5px 0 0;
+    font-size: 1.2em; /* Slightly larger font for tagline */
+    color: #ebe9e9; /* Lighter grey for tagline */
+    margin: 5px 0 0; /* Add spacing above the tagline */
 }
 
 /* Navigation Styles */
 nav {
-    position: sticky;
-    top: 0;
+    position: sticky; /* Stick to the top of the viewport */
+    top: 0; /* Position at the top */
     background-color: #222; /* Slightly lighter dark grey for the nav bar */
-    padding: 10px 0;
-    text-align: center;
-    z-index: 1000;
-    box-shadow: 1px 2px 10px #6e1313
+    padding: 10px 0; /* Add vertical padding */
+    text-align: center; /* Center-align navigation links */
+    z-index: 1000; /* Ensure it stays above other elements */
+    box-shadow: 1px 2px 10px #6e1313; /* Add a red-tinted shadow */
 }
 
 nav a {
-    margin: 0 15px;
-    text-decoration: none;
+    margin: 0 15px; /* Add spacing between links */
+    text-decoration: none; /* Remove underline */
     color: #d3d3d3; /* Light grey text for nav links */
-    font-weight: bold;
-    transition: color 0.3s ease;
+    font-weight: bold; /* Bold text for emphasis */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
 }
 
 nav a:hover {
@@ -83,97 +79,95 @@ nav a:hover {
 
 /* Main Content Styles */
 main {
-    padding: 20px;
-    max-width: 800px;
-    margin: 0 auto;
+    padding: 20px; /* Add padding around the main content */
+    max-width: 800px; /* Limit the width for readability */
+    margin: 0 auto; /* Center the main content */
 }
 
 /* Section Styles */
 section {
-    padding: 40px 20px;
-    border-bottom: 1px solid #444; /* Medium grey border for dark mode */
+    padding: 40px 20px; /* Add padding inside sections */
+    border-bottom: 1px solid #444; /* Add a medium grey border for separation */
     background-color: #2a2a2a; /* Slightly lighter dark grey for sections */
-    border-radius: 5px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Darker shadow for depth */
+    border-radius: 5px; /* Round the corners */
+    margin-bottom: 20px; /* Add spacing between sections */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Add a subtle shadow for depth */
 }
 
 section h2 {
-    margin-top: 0;
-    color: #fff; /* White for section headings */
-    font-size: 2em;
+    margin-top: 0; /* Remove default margin above heading */
+    color: #fff; /* White text for section headings */
+    font-size: 2em; /* Large font size for emphasis */
 }
 
 /* List Styles */
 ul {
-    list-style-type: none;
-    padding: 0;
+    list-style-type: none; /* Remove default bullet points */
+    padding: 0; /* Remove default padding */
 }
 
 ul li {
-    margin: 10px 0;
-    display: flex;
-    align-items: center;
+    margin: 10px 0; /* Add spacing between list items */
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center-align items vertically */
 }
 
 ul li i {
-    margin-right: 10px;
+    margin-right: 10px; /* Add spacing between icon and text */
     color: #a83232; /* Deep crimson red for icons */
 }
 
 /* Link Styles */
 a {
     color: #a83232; /* Deep crimson red for links */
-    text-decoration: none;
-    transition: color 0.3s ease;
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
 }
 
 a:hover {
     color: #c14b4b; /* Lighter red for hover effect */
-    text-decoration: underline;
+    text-decoration: underline; /* Add underline on hover */
 }
 
 /* Button Style for Resume Link */
 .button {
-    display: inline-block;
-    padding: 10px 20px;
+    display: inline-block; /* Make the button inline */
+    padding: 10px 20px; /* Add padding inside the button */
     background-color: #a83232; /* Deep crimson red for the button */
     color: #fff; /* White text for contrast */
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Round the corners */
+    transition: background-color 0.3s ease; /* Smooth background color transition on hover */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Add a subtle shadow for depth */
 }
 
 .button:hover {
     background-color: #c14b4b; /* Lighter red for hover */
-    text-decoration: none;
+    text-decoration: none; /* Ensure no underline on hover */
 }
 
 /* Project Section Styles */
 .project {
-    background-color: rgba(51, 51, 51, 0.8); 
-    padding: 15px;
-    border-radius: 5px;
-    margin-top: 10px;
-    transition: transform 0.3s ease;
-    border: 1px solid #444;
+    background-color: rgba(51, 51, 51, 0.8); /* Semi-transparent dark grey background */
+    padding: 15px; /* Add padding inside the project box */
+    border-radius: 5px; /* Round the corners */
+    margin-top: 10px; /* Add spacing above the project box */
+    transition: transform 0.3s ease; /* Smooth transform transition on hover */
+    border: 1px solid #444; /* Add a medium grey border */
 }
 
-
-
 .project:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4); /* Darker shadow on hover */
+    transform: translateY(-5px); /* Slightly lift the project box on hover */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4); /* Add a darker shadow on hover */
 }
 
 /* Footer Styles */
 footer {
-    text-align: center;
-    padding: 15px 0;
+    text-align: center; /* Center-align footer text */
+    padding: 15px 0; /* Add vertical padding */
     background: #222; /* Match the nav bar color */
     color: #d3d3d3; /* Light grey text */
-    font-size: 0.9em;
+    font-size: 0.9em; /* Slightly smaller font size */
 }
 
 footer a {
@@ -186,17 +180,17 @@ footer a:hover {
 
 /* Back to Top Button */
 #backToTop {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    padding: 10px 15px;
+    display: none; /* Hide the button by default */
+    position: fixed; /* Fix the button to the viewport */
+    bottom: 20px; /* Position 20px from the bottom */
+    right: 20px; /* Position 20px from the right */
+    padding: 10px 15px; /* Add padding inside the button */
     background-color: #a83232; /* Deep crimson red for the button */
     color: #fff; /* White text for contrast */
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    border: none; /* Remove border */
+    border-radius: 5px; /* Round the corners */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s ease; /* Smooth background color transition on hover */
 }
 
 #backToTop:hover {
@@ -206,22 +200,24 @@ footer a:hover {
 /* Responsive Design */
 @media (max-width: 600px) {
     header, main, footer {
-        text-align: center;
+        text-align: center; /* Center-align text for smaller screens */
     }
 
     nav a {
-        display: block;
-        margin: 10px 0;
+        display: block; /* Stack navigation links vertically */
+        margin: 10px 0; /* Add spacing between links */
     }
 
     section {
-        padding: 20px 10px;
+        padding: 20px 10px; /* Reduce padding for smaller screens */
     }
 
     .button {
-        padding: 8px 15px;
+        padding: 8px 15px; /* Reduce button padding for smaller screens */
     }
 }
+
+/* Skills Section Styles */
 section#skills ul li strong {
     margin-right: 5px; /* Adds a small space after the bold text (e.g., after the colon) */
 }
