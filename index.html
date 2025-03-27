@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ty Baldwin - Personal Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#interests">Interests</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="hero">
+        <h1>Hi, I'm Ty Baldwin</h1>
+        <p>Mathematics and Computer Science Student</p>
+        <p>Fascinated by the intersection of code, AI, and the cosmos.</p>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- About Me Section -->
+        <section id="about">
+            <h2>About Me</h2>
+            <p>
+                I'm currently a junior at the University of Oregon, pursuing a Bachelor of Science in Mathematics and Computer Science, 
+                with an anticipated graduation date of June 2026. My journey into technology began with an innate curiosity for how things 
+                work. During the coronavirus pandemic and initially through YouTube, I discovered a deep fascination for physics and the universe. 
+                Inspired by renowned astrophysicists like Stephen Hawking, Brian Cox, Brian Greene, and others I continue to explore these 
+                concepts through reading and independent study.
+            </p>
+            <p>
+                Though tempted to major in physics, I ultimately chose to continue to channel my passion into mathematics and computer science. 
+                I believe that my technical education can seamlessly blend with my personal interests. Professionally, I am particularly drawn 
+                to backend software engineering, excited by the possibilities of creating robust and scalable systems. My interest areas—such as 
+                space-based technologies, artificial intelligence, and machine learning—reflect a personal enthusiasm, but I remain versatile and 
+                eager to contribute my skills across various domains within computer science.
+            </p>        
+
+            <p>
+                Before attending the University of Oregon, I completed my general education at Portland Community College while simultaneously 
+                working full-time in the kitchen of a retirement home. These experiences in the food industry profoundly shaped my professional character. 
+                I developed strong customer service abilities through direct resident interaction, honed my capacity to collaborate effectively within 
+                diverse teams, and cultivated resilience and adaptability in dynamic, high-pressure environments.    
+                
+            </p>
+
+            <p>
+                Today, I'm ready to integrate these invaluable soft skills with my technical knowledge to excel in a technical role. Whether it's developing 
+                innovative backend solutions, contributing to groundbreaking space exploration projects, or advancing AI capabilities, I am committed to leveraging 
+                my unique blend of experiences to make meaningful contributions.
+            </p>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li><strong>Programming Languages:</strong> C, C++, Python, Bash, HTML (basic), CSS (basic) </li>
+                <li><strong>Libraries/Frameworks:</strong> Pandas, Scikit-Learn, XGBoost, CUDA, NumPy </li>
+                <li><strong>Tools:</strong> GitHub, Unix/Linux, Virtual environments, Virtual Machines</li>
+                <li><strong>Concepts:</strong> Data Structures, Algorithms, Object-Oriented Programming, Linear Algebra</li>
+                <li><strong>Other:</strong> Customer Service, Adaptability, Intermediate Spanish, PC Assembly/Troubleshooting</li>
+            </ul>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>PyStockProj</h3>
+                <p>A Python-based stock price prediction tool built with scikit-learn, XGBoost, pandas and some CUDA. Analyzes historical data to predict trends, 
+                    featuring data preprocessing and model training. <a href="https://github.com/typb123/PyStockProj" target="_blank">View on GitHub</a>.</p>
+            </div>
+            <div class="project">
+                <h3>Personal Portfolio Website</h3>
+                <p>A personal portfolio built with HTML, CSS, and JavaScript to showcase my skills and interests <a href="[GitHub Link]" target="_blank">View on GitHub</a>.</p>
+            </div>
+            <div class="project">
+                <h3>Mini-Projects</h3>
+                <p>Mini-projects in C, C++, and Python demonstrating foundational skills: 
+                    <a href="https://github.com/typb123/Python-Basics" target="_blank">Python Basics</a>,
+                    <a href="https://github.com/typb123/C-and-CPP-basics" target="_blank">C\C++ Basics</a>.
+                </p>
+            </div>
+        </section>
+
+        <!-- Interests Section -->
+        <section id="interests">
+            <h2>Interests</h2>
+            <p>Outside of code and my interest in astrophysics and space exploration. I enjoy golf, watching football, hiking, and going to the gym. I also try to spend as much time as possible 
+                in nature, I have enjoyed camping and backpacking since I was a young kid.
+            </p>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Feel free to connect or reach out!</p>
+            <ul>
+                <li><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/typb123" target="_blank">LinkedIn</a></li>
+                <li><i class="fab fa-github"></i> <a href="https://github.com/typb123" target="_blank">GitHub</a></li>
+                <li><i class="fas fa-envelope"></i> <a href="mailto:typb@uoregon.edu">typb@uoregon.edu</a></li>
+            </ul>
+            <p><a href="TyResume 3-26.pdf" target="_blank" class="button">View My Resume</a></p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Ty Baldwin | <a href="mailto:typb@uoregon.edu">typb@uoregon.edu</a></p>
+        <p>Background image courtesy of NASA/ESA/CSA</p>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop">Back to Top</button>
+
+    <!-- JavaScript for Smooth Scrolling and Back to Top -->
+    <script>
+        // Smooth scrolling for navigation links with offset for sticky nav
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1); // Get the target ID (e.g., "about")
+                const targetElement = document.getElementById(targetId);
+                const navHeight = document.querySelector('nav').offsetHeight; // Get the height of the nav bar
+                const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - navHeight - 10; // Offset by nav height + a little extra space
+    
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    
+        // Back to Top button functionality
+        const backToTopBtn = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopBtn.style.display = 'block';
+            } else {
+                backToTopBtn.style.display = 'none';
+            }
+        });
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,227 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #d3d3d3; /* Light grey text for readability on dark background */
+    background-color: #1a1a1a; /* Dark grey background */
+}
+
+header#hero {
+    text-align: center;
+    padding: 30px 20px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('DEEP.png') center/cover;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    min-height: 250px; /* Ensure the image is visible */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+header#hero h1, header#hero p {
+    opacity: 0;
+    animation: fadeIn 1.0s ease-in forwards;
+}
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+header#hero h1 {
+    font-size: 3em;  /*Slightly larger than 2.5em */
+    font-weight: 700;
+} 
+section {
+    opacity: 0;
+    animation: fadeIn 1.25s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    padding: 30px 20px;
+    background: linear-gradient(to bottom, #2a2a2a, #1a1a1a); /* Dark gradient for depth */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Darker shadow for dark mode */
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+    color: #fff; /* White for the name to stand out */
+}
+
+header p {
+    font-size: 1.2em;
+    color: #ebe9e9; /* Lighter grey for the tagline */
+    margin: 5px 0 0;
+}
+
+/* Navigation Styles */
+nav {
+    position: sticky;
+    top: 0;
+    background-color: #222; /* Slightly lighter dark grey for the nav bar */
+    padding: 10px 0;
+    text-align: center;
+    z-index: 1000;
+    box-shadow: 1px 2px 10px #6e1313
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #d3d3d3; /* Light grey text for nav links */
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #c14b4b; /* Lighter red for hover effect */
+}
+
+/* Main Content Styles */
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Section Styles */
+section {
+    padding: 40px 20px;
+    border-bottom: 1px solid #444; /* Medium grey border for dark mode */
+    background-color: #2a2a2a; /* Slightly lighter dark grey for sections */
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Darker shadow for depth */
+}
+
+section h2 {
+    margin-top: 0;
+    color: #fff; /* White for section headings */
+    font-size: 2em;
+}
+
+/* List Styles */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+ul li i {
+    margin-right: 10px;
+    color: #a83232; /* Deep crimson red for icons */
+}
+
+/* Link Styles */
+a {
+    color: #a83232; /* Deep crimson red for links */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #c14b4b; /* Lighter red for hover effect */
+    text-decoration: underline;
+}
+
+/* Button Style for Resume Link */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #a83232; /* Deep crimson red for the button */
+    color: #fff; /* White text for contrast */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.button:hover {
+    background-color: #c14b4b; /* Lighter red for hover */
+    text-decoration: none;
+}
+
+/* Project Section Styles */
+.project {
+    background-color: rgba(51, 51, 51, 0.8); 
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: transform 0.3s ease;
+    border: 1px solid #444;
+}
+
+
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4); /* Darker shadow on hover */
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background: #222; /* Match the nav bar color */
+    color: #d3d3d3; /* Light grey text */
+    font-size: 0.9em;
+}
+
+footer a {
+    color: #a83232; /* Deep crimson red for footer links */
+}
+
+footer a:hover {
+    color: #c14b4b; /* Lighter red for hover */
+}
+
+/* Back to Top Button */
+#backToTop {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background-color: #a83232; /* Deep crimson red for the button */
+    color: #fff; /* White text for contrast */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#backToTop:hover {
+    background-color: #c14b4b; /* Lighter red for hover */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    header, main, footer {
+        text-align: center;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    section {
+        padding: 20px 10px;
+    }
+
+    .button {
+        padding: 8px 15px;
+    }
+}
+section#skills ul li strong {
+    margin-right: 5px; /* Adds a small space after the bold text (e.g., after the colon) */
+}
